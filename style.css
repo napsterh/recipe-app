@@ -60,9 +60,53 @@ header button{
     padding: 0;
 }
 
-/*
-    FALTAAA
-*/
+.fav-meals li {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 75px;
+}
+
+.fav-meals li .clear {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear {
+    opacity: 1;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span {
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+.meal {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    cursor: pointer;
+    margin: 1.5rem;
+    overflow: hidden;
+}
 
 .popup-container{
     background-color: rgba(0, 0, 0, 0.5);
