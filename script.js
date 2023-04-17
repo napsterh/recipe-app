@@ -45,23 +45,21 @@ const addMeal = ( mealData, random = false ) => {
     
     meal.innerHTML = `
             <div class="meal-header">
-            ${
-                random
-                    ? `
-            <span class="random"> Random Recipe </span>`
+                ${random ? 
+                    `<span class="random"> Random Recipe </span>`
                     : ""
-            }
-            <img
-                src="${mealData.strMealThumb}"
-                alt="${mealData.strMeal}"
-            />
-        </div>
-        <div class="meal-body">
-            <h4>${mealData.strMeal}</h4>
-            <button class="fav-btn">
-                <i class="fas fa-heart"></i>
-            </button>
-        </div>
+                }
+                <img
+                    src="${mealData.strMealThumb}"
+                    alt="${mealData.strMeal}"
+                />
+            </div>
+            <div class="meal-body">
+                <h4>${mealData.strMeal}</h4>
+                <button class="fav-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
     `
 
     const btn = meal.querySelector(".meal-body .fav-btn");
@@ -95,10 +93,7 @@ const addMealLS = (mealId) => {
 const removeMealLS = (mealId) => {
     const mealIds = getMealsLS();
 
-    localStorage.setItem(
-        "mealIds",
-        JSON.stringify(mealIds.filter((id) => id !== mealId))
-    );
+    localStorage.setItem("mealIds", JSON.stringify(mealIds.filter((id) => id !== mealId)));
 }
 
 const getMealsLS = () => {
